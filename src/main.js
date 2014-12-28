@@ -13,5 +13,8 @@ function guessNumber(){
   var judgeNumber = new JudgeNumber();
   var answer = judgeNumber.getScore(inputArrays,randomNumberArrays);
 
-  console.log(answer);
+  var printText = new PrintText();
+  var textAnswer = printText.getText(answer);
+
+  console.log(textAnswer);
 }

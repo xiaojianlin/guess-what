@@ -3,9 +3,7 @@ function Input() {
 }
 
 Input.getInputArrays = function () {
-  var inputArrays = prompt.readLine('请输入密码：',function(password){
-    return password;
-  });
+  var inputArrays = [1,2,3,4];
 
   return inputArrays;
 };
