@@ -8,7 +8,7 @@ describe('RandomNumber', function() {
 
       var result = randomNumber.getRandomNumberArray();
 
-      expect(result).toBeNull();
+      expect(result.length).toBe(4);
     });
   });
 });
