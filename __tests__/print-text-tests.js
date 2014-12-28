@@ -11,5 +11,15 @@ describe('PrintText', function () {
 
       expect(result).toEqual('congratulation !!!');
     });
+
+    it('should return getText 1A3B !!!', function () {
+      var text = '1A3B';
+      var PrintText = require('../src/print-text');
+      var printText = new PrintText();
+
+      var result = printText.getText(text);
+
+      expect(result).toEqual('game over');
+    });
   });
 });

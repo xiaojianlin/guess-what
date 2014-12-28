@@ -2,6 +2,7 @@ var _ = require('lodash');
 
 function JudgeNumber() {
 }
+
 JudgeNumber.prototype.getScore = function (inputArrays, randomNumberArrays) {
   var count = 0;
   var aCount = 0;
