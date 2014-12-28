@@ -31,5 +31,15 @@ describe('JudgeNumber', function() {
 
       expect(result).toEqual('1A1B');
     });
+
+    it('should return the 0A4B', function() {
+
+      var JudgeNumber = require('../src/judge-number');
+      var judgeNumber = new JudgeNumber();
+
+      var result = judgeNumber.getScore([1,2,3,4],[4,3,2,1]);
+
+      expect(result).toEqual('0A4B');
+    });
   });
 });
