@@ -2,10 +2,14 @@ jest.dontMock('../src/model/print-text');
 
 describe('PrintText', function () {
   describe('#getText', function () {
+    var PrintText,printText;
+    beforeEach(function() {
+      PrintText = require('../src/model/print-text');
+      printText = new PrintText();
+    });
+
     it('should return getText congratulation !!!', function () {
       var text = '4A0B';
-      var PrintText = require('../src/model/print-text');
-      var printText = new PrintText();
 
       var result = printText.getText(text);
 
@@ -14,12 +18,10 @@ describe('PrintText', function () {
 
     it('should return getText 1A3B !!!', function () {
       var text = '1A3B';
-      var PrintText = require('../src/model/print-text');
-      var printText = new PrintText();
 
       var result = printText.getText(text);
 
-      expect(result).toEqual('game over');
+      expect(result).toEqual('sorry! But we given you presentation 1A3B, please again!');
     });
   });
 });
