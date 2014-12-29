@@ -1,19 +1,21 @@
-jest.dontMock('../src/random-number');
+jest.dontMock('../src/model/random-number');
 
 describe('RandomNumber', function() {
   describe('#getRandomNumberArray', function() {
-    it('should return the randomNumberIsLength', function() {
-      var RandomNumber = require('../src/random-number.js');
-      var randomNumber = new RandomNumber();
+    var RandomNumber,randomNumber;
+    beforeEach(function() {
+      RandomNumber = require('../src/model/random-number.js');
+      randomNumber = new RandomNumber();
+    });
 
+
+    it('should return the randomNumberIsLength', function() {
       var result = randomNumber.getRandomNumberArray();
 
       expect(result.length).toBe(4);
     });
 
     it('should return the randomNumberIsNotRepeat', function() {
-      var RandomNumber = require('../src/random-number.js');
-      var randomNumber = new RandomNumber();
       var count = 0;
       var result = randomNumber.getRandomNumberArray();
 
@@ -24,7 +26,6 @@ describe('RandomNumber', function() {
           }
         }
       }
-
       expect(count).toBe(0);
     });
   });

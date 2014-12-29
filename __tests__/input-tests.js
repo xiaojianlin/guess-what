@@ -1,9 +1,9 @@
-jest.dontMock('../src/input');
+jest.dontMock('../src/model/input');
 
 describe('Input', function () {
   describe(',getInputArrays', function () {
     it('should return inputArrays', function () {
-      var Input = require('../src/input');
+      var Input = require('../src/model/input');
 
       var result = Input.getInputArrays();
 

@@ -1,7 +1,7 @@
-var RandomNumber = require('./random-number');
-var Input = require('./input');
-var JudgeNumber = require('./judge-number');
-var PrintText = require('./print-text');
+var RandomNumber = require('./model/random-number');
+var Input = require('./model/input');
+var JudgeNumber = require('./model/judge-number');
+var PrintText = require('./model/print-text');
 
 
 function guessNumber(){
