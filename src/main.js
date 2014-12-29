@@ -27,3 +27,5 @@ function guessNumber(){
     }
   }
 }
+
+module.exports = guessNumber;
