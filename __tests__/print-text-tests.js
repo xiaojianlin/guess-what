@@ -7,6 +7,11 @@ describe('PrintText', function () {
       PrintText = require('../src/model/print-text');
       printText = new PrintText();
     });
+    
+    it('should return getText congratulation !!!', function () {
+      var result = PrintText.title();
+      expect(result).toEqual('Welcome!!\n The guess-what(guess number).\n');
+    });
 
     it('should return getText congratulation !!!', function () {
       var text = '4A0B';

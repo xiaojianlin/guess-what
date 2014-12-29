@@ -8,7 +8,6 @@ describe('RandomNumber', function() {
       randomNumber = new RandomNumber();
     });
 
-
     it('should return the randomNumberIsLength', function() {
       var result = randomNumber.getRandomNumberArray();
 

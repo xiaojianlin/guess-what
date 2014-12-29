@@ -5,16 +5,25 @@ var PrintText = require('./model/print-text');
 
 
 function guessNumber(){
-  var randomNumber = new RandomNumber();
-  var randomNumberArrays = randomNumber.getRandomNumberArray();
+  var time = 6;
+  PrintText.title();
+  for(var i = 0; i < time; i++) {
+    console.log('Please input 4 number!');
+    var randomNumber = new RandomNumber();
+    var randomNumberArrays = randomNumber.getRandomNumberArray();
 
-  var inputArrays = Input.getInputArrays();
+    var inputArrays = Input.getInputArrays();
 
-  var judgeNumber = new JudgeNumber();
-  var answer = judgeNumber.getScore(inputArrays,randomNumberArrays);
+    var judgeNumber = new JudgeNumber();
+    var answer = judgeNumber.getScore(inputArrays,randomNumberArrays);
 
-  var printText = new PrintText();
-  var textAnswer = printText.getText(answer);
-
-  console.log(textAnswer);
+    var printText = new PrintText();
+    var textAnswer = printText.getText(answer);
+    if (textAnswer === 'congratulation !!!') {
+      console.log(textAnswer);
+      break;
+    } else {
+      console.log(textAnswer);
+    }
+  }
 }
